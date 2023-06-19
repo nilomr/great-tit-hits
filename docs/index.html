@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/uikit.css">
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <!-- Import element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right"
+        uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-logo uk-light">wytham great tit
+                song dataset</div>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="button-container uk-navbar-nav">
+                <a class="button uk-text-lowercase" href="#intro" uk-scroll>intro</a>
+                <a class="button uk-text-lowercase" href="#docs" uk-scroll>docs</a>
+                <a class="button uk-text-lowercase" href="mailto:" uk-scroll>about</a>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends  -->
+
+    <!-- Navigation Bar Mobile -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right"
+        uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-logo uk-light">wytham great tit
+                song dataset</div>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-light">
+                <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Change This -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-light">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical uk-text-lowercase uk-light">
+                <li class="uk-active"><a href="#" uk-scroll>intro</a></li>
+                <li class="uk-active"><a href="#docs" uk-scroll>docs</a></li>
+                <li class="uk-active"><a href="#about" uk-scroll>about</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation Bar Mobile Ends -->
+    <!-- Home -->
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+        <h1 class="uk-margin-xlarge-left uk-light uk-text-left 
+        uk-margin-xlarge-right" style="margin: 0 0 5px 0; line-height: 1em; color: rgb(80, 80, 80);">Great Tit<br>Song
+            Dataset</h1>
+        <div class="uk-margin-xlarge-left uk-text-left uk-margin-xlarge-right uk-flex-left
+        button-container">
+            <a href="https://example.com/article" target="_blank" class="button">Article</a>
+            <a href="https://example.com/code-repository" target="_blank" class="button">Code Repository</a>
+            <a href="https://example.com/osf-data" target="_blank" class="button">OSF Data</a>
+        </div>
+    </section>
+
+    <!-- Home Ends -->
+    <br>
+
+
+    <hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
+
+    <!-- Intro -->
+    <section id="intro" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+        <h3 class="uk-margin-xlarge-left uk-light">Introduction</h3>
+        <!-- Change here to ur paragraph -->
+        <p class="uk-margin-xlarge-left uk-margin-xlarge-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla eleifend posuere tortor vel lobortis. Morbi pretium in sapien non suscipit. Nam ac efficitur enim.
+            Vestibulum accumsan erat sit amet nulla commodo, nec varius felis aliquam. Aliquam suscipit mauris lacus, at
+            euismod purus tempor aliquam. Donec varius sem nisl. Fusce augue tortor, hendrerit at elit quis, aliquet
+            blandit eros. Nam gravida sem velit, eu placerat nunc commodo ut. <br><br>Maecenas ultricies magna nec nisi
+            egestas, in posuere velit tincidunt. Nam quis turpis non ligula dapibus bibendum sit amet at felis.
+            Vestibulum ornare tempor nulla, quis sodales ex consequat vel. Morbi sollicitudin ligula eget mattis
+            euismod. Nulla scelerisque malesuada arcu a vulputate. Phasellus ac lectus consequat, eleifend libero id,
+            tincidunt lectus. Sed tempus gravida odio, sed semper neque aliquet imperdiet.</p>
+        <a href="" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href=""
+            class="uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="" class="uk-button-text uk-light"
+            uk-icon="github"></a> &nbsp;<a href="" class=" uk-light uk-button-text" uk-icon="linkedin"></a>
+
+        <!-- Intro Ends -->
+
+
+
+
+    </section>
+
+    <!-- docs Section -->
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    <section id="docs" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+        <h3 class="uk-margin-xlarge-left uk-light">Documentation</h3>
+        <p class="uk-margin-xlarge-left">docs that i've been working on</p>
+
+        <!-- Insert markdown file here, from ./content/metadata/main.md -->
+        <zero-md class="uk-margin-xlarge-left uk-margin-xlarge-right" src="./content/metadata/main.md"></zero-md>
+             <template>
+                <link rel="stylesheet" href="css/uikit.css">
+                <link rel="stylesheet" href="css/styles.css">
+            </template>
+        </zero-md>
+
+
+
+
+        <br>
+
+
+    </section>
+    <hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+    </div>
+    <!-- docs Section Ends -->
+
+</body>
+
+</html>

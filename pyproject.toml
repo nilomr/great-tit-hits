@@ -1,0 +1,44 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ghits"
+description = "A large database of songs from a wild population of great tits"
+version = "0.0.1"
+authors = [{ name = "Nilo M. Recalde", email = "nilomerinorecalde@gmail.com" }]
+classifiers = [
+    'License :: OSI Approved :: MIT License',
+    'Development Status :: 4 - Beta',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = ["pyrootutils", "pykanto", 'geopandas']
+
+[project.optional-dependencies]
+dev = ["ipywidgets", "ipykernel", "pytest", "nox", "black"]
+test = ["pytest >=7"]
+doc = [
+    "sphinx",
+    "sphinx-copybutton",
+    "sphinx_book_theme",
+    "myst-nb",
+    "myst-parser",
+]
+
+[project.urls]
+Source = "https://github.com/nilomr/great-tit-hits"
+Documentation = "https://nilomr.github.io/great-tit-hits"
+
+[project.scripts]
+pykanto-slaunch = 'pykanto.utils.slurm.launch:submit_job'
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+profile = "black"
+float_to_top = 'True'
