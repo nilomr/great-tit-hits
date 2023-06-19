@@ -47,30 +47,30 @@ according to the same convention, `<ID>_<YYYYMMDD_HHMMSS>_<start frame>.JSON`, a
 each file contains the following fields:
 
 
-```bash
-{
-    "sample_rate": The sample rate of the audio,
-    "bit_rate": The bit rate of the audio,
-    "length_s": The duration of the audio segment,
-    "ID": The unique identifier for the audio segment,
-    "label": The label associated with the audio segment,
-    "start": The start position of the audio segment within the original source file,
-    "end": The end position of the audio segment within the original source file,
-    "lower_freq": The lower frequency bound of the audio segment,
-    "upper_freq": The upper frequency bound of the audio segment,
-    "max_amplitude": The maximum amplitude of the audio segment,
-    "min_amplitude": The minimum amplitude of the audio segment,
-    "source_wav": The file path to the original source WAV file,
-    "annotation_file": The file path to the XML annotation file associated with the audio,
-    "wav_file": The file path to the segmented WAV file,
-    "class_id": The class identifier for the audio segment,
-    "datetime": The date and time of the recording,
-    "onsets": A list of onset times in seconds,
-    "offsets": A list of offset times in seconds,
-    "silence_durations": A list of silence durations in seconds,
-    "unit_durations": A list of unit durations in seconds
-}
-```
+| Key              | Description                                      |
+|------------------|--------------------------------------------------|
+| sample_rate      | The sample rate of the audio                     |
+| bit_rate         | The bit rate of the audio                        |
+| length_s         | The duration of the audio segment                |
+| ID               | The unique identifier for the audio segment       |
+| label            | The label associated with the audio segment       |
+| start            | The start position of the audio segment           |
+| end              | The end position of the audio segment             |
+| lower_freq       | The lower frequency bound of the audio segment    |
+| upper_freq       | The upper frequency bound of the audio segment    |
+| max_amplitude    | The maximum amplitude of the audio segment        |
+| min_amplitude    | The minimum amplitude of the audio segment        |
+| source_wav       | The file path to the original source WAV file     |
+| annotation_file  | The file path to the XML annotation file          |
+| wav_file         | The file path to the segmented WAV file           |
+| class_id         | The class identifier for the audio segment        |
+| datetime         | The date and time of the recording                |
+| onsets           | A list of onset times in seconds                 |
+| offsets          | A list of offset times in seconds                |
+| silence_durations| A list of silence durations in seconds           |
+| unit_durations   | A list of unit durations in seconds              |
+
+
 
 ## Dataset Size
 
