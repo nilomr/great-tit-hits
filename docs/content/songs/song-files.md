@@ -47,7 +47,7 @@ according to the same convention, `<ID>_<YYYYMMDD_HHMMSS>_<start frame>.JSON`, a
 each file contains the following fields:
 
 
-```json
+```bash
 {
     "sample_rate": The sample rate of the audio,
     "bit_rate": The bit rate of the audio,
