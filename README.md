@@ -12,7 +12,7 @@
 
 ![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg) ![version](https://img.shields.io/badge/version-0.1.0-orange)
 
-This repository presents the **Wytham Great Tit Song Dataset** dataset.<br> Its
+This repository presents the **Wytham Great Tit Song Dataset**.<br> Its
 companion repository,
 [great-tit-hits-setup](https://github.com/nilomr/great-tit-hits-setup), contains
 code to reproduce it step-by-step.
