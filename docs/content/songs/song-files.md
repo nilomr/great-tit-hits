@@ -27,6 +27,10 @@ song-files
     └── ...
 ```
 
+## Dataset Size
+
+There are 109,963 files in each of the `WAV` and `JSON` folders. The total size of the dataset is 11.4 GB.
+
 ## File Format
 
 The dataset is provided in ZIP format, with two folders: `WAV` and `JSON`. The
@@ -69,10 +73,3 @@ each file contains the following fields:
 | offsets          | A list of offset times in seconds                |
 | silence_durations| A list of silence durations in seconds           |
 | unit_durations   | A list of unit durations in seconds              |
-
-
-
-## Dataset Size
-
-There are 109,963 files in each of the `WAV` and `JSON` folders. The total size of the dataset is 11.4 GB.
-

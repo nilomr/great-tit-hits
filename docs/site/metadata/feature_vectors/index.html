@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.4.3, mkdocs-terminal-4.4.0">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+    
+    
+    <link href="../../../css/styles.css" rel="stylesheet"> 
+    <link href="../../../css/uikit.css" rel="stylesheet"> 
+    
+    
+    <script src="../../../js/uikit.js"></script>
+    <script src="../../../js/uikit.js"></script>
+    <script src="../../../js/uikit-icons.js"></script>
+    <script src="../../../js/uikit-icons.js"></script>
+
+
+    
+ 
+<title>feature_vectors.csv - docs</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.7em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 2.5fr 9fr;
+    }
+}</style>
+
+
+
+
+
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal">
+
+    <!-- Navigation Bar -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right"
+        uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-logo uk-light">wytham great tit
+                song dataset</div>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="button-container uk-navbar-nav">
+                <a class="button uk-text-lowercase" href="/docs/index.html#home">home</a>
+                <a class="button uk-text-lowercase" href="/docs/site/index.html">docs</a>
+                <a class="button uk-text-lowercase" href="/docs/index.html#about" uk-scroll>about</a>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends  -->
+
+    <!-- Navigation Bar Mobile -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right"
+        uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-logo uk-light">wytham great tit
+                song dataset</div>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-light">
+                <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Change This -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-light">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical uk-text-lowercase uk-light">
+                <li class="uk-active"><a href="/docs/index.html#home">home</a></li>
+                <li class="uk-active"><a href="/docs/site/index.html">docs</a></li>
+                <li class="uk-active"><a href="/docs/index.html#about" uk-scroll>about</a></li>
+            </ul>
+        </div>
+    </div><div class="container">
+    <div class="terminal-nav uk-navbar-container uk-margin-small-left uk-margin-small-right uk-margin-xlarge-left uk-margin-xlarge-right uk-navbar">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a class="no-style">docs</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="0">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        <div class="container">
+            <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../..">[docs]</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../songs/song-files/">song_files</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+                
+        
+
+        
+            
+    
+        
+        <span class="
+        
+            
+        
+    
+
+    terminal-mkdocs-side-nav-item--active terminal-mkdocs-side-nav-section-no-index">metadata</span>
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../main/">main.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../morphometrics/">morphometrics.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../nestboxes/">nestboxes.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../great-tit-hits/">great-tit-hits.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">feature_vectors.csv</span>
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../wytham_map/">/wytham_map</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#model-based-feature-vectors">Model-Based Feature Vectors</a></li>
+        <li><a href="#file-format">File Format</a></li>
+    </ul>
+</nav>
+</aside>
+                <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="model-based-feature-vectors">Model-Based Feature Vectors<a class="headerlink" href="#model-based-feature-vectors" title="Anchor link to this section for reference">#</a></h1>
+<p>This CSV file contains model-based feature vectors for a the entire dataset, with 109,963 samples and 384 dimensions. Each row in the file represents a sample, and each column represents a feature.</p>
+<p>The feature vectors were generated using a deep learning model trained on the dataset. See the article for further information.</p>
+<p>The feature vectors can be used as input to other machine learning models or for data analysis tasks. They can also be used to visualize the data in lower dimensions using techniques such as t-SNE or PCA.</p>
+<h2 id="file-format">File Format<a class="headerlink" href="#file-format" title="Anchor link to this section for reference">#</a></h2>
+<p>The file is in CSV format, with each row representing a sample and each column
+representing a feature. The first row of the file contains the column names,
+which you can disregard, and there is no index.</p>
+</section>
+
+                </main>
+            </div>
+            <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Docs built based on <a
+            href="http://www.mkdocs.org">MkDocs</a> and <a
+            href="https://github.com/ntno/mkdocs-terminal">Terminal.</a> © Nilo M.
+            Recalde 2023
+        </div>
+    </div>
+</footer>
+        </div>
+
+        
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+        
+        
+    </div>
+</body>
+
+</html>

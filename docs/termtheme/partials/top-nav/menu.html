@@ -1,0 +1,12 @@
+{% set top_nav_ns = namespace(item_count=0) %}
+        <nav class="terminal-menu">
+            {% if nav|length>1 %}
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                {%- block search_button %}
+                    {% with button_idx=top_nav_ns.item_count %}
+                    {% include "partials/top-nav/search-button.html" %}
+                    {% endwith %}
+                {%- endblock search_button %}
+            </ul>
+            {% endif %}
+        </nav>

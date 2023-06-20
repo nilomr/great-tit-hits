@@ -1,0 +1,45 @@
+site_name: docs
+docs_dir: content
+theme:
+  name: terminal
+  custom_dir: termtheme/
+  palette: dark
+  features:
+    - navigation.side.indexes
+extra_css:
+  - ../css/styles.css
+  - ../css/uikit.css
+extra_js:
+  - ../js/uikit.js
+  - ../js/uikit-icons.js
+
+
+nav:
+    - '[docs]' : index.md
+    - 'song_files': 'songs/song-files.md'
+    - metadata:
+        - 'main.csv': 'metadata/main.md'
+        - 'morphometrics.csv': 'metadata/morphometrics.md'
+        - 'nestboxes.csv' : 'metadata/nestboxes.md'
+        - 'great-tit-hits.csv' : 'metadata/great-tit-hits.md'
+        - 'feature_vectors.csv': 'metadata/feature_vectors.md'
+        - '/wytham_map': 'metadata/wytham_map.md'
+
+markdown_extensions:
+  # Python Markdown  
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - toc:
+      permalink: "#"
+      permalink_title: Anchor link to this section for reference
+
+  # PyMdown Extensions
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: 
+        - docs

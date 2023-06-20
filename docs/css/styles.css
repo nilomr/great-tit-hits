@@ -1,5 +1,26 @@
 html {
     font-family: sans-serif;
+    background-color: #1a2124 !important;
+}
+
+
+.terminal h1,
+.terminal h2,
+.terminal h3,
+.terminal h4,
+.terminal h5,
+.terminal h6 {
+    margin: 0 0 20px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: normal;
+}
+
+.terminal h1 {
+    font-size: 1.5em;
+}
+
+.terminal h2 {
+    font-size: 1.25em;
 }
 
 body {
@@ -8,8 +29,41 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #747474;
+    color: #969696;
     background-color: #1a2124;
+}
+
+#terminal-mkdocs-footer-copyright-info {
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.c-footer {
+    background-color: #1a2124;
+    color: #969696;
+    text-align: left;
+    font-size: 0.8em;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 3em;
+}
+
+.c-footer a {
+    color: #d3a237;
+    text-decoration: none;
+}
+
+.c-footer a:hover {
+    text-decoration: none;
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        margin-left: 0em;
+        margin-right: auto;
+        max-width: 80em;
+    }
+
 }
 
 
@@ -19,35 +73,43 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-
 .button-container a {
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
-    margin-right: 10px;
+    margin-right: 5px;
+    padding-right: 5px;
+    position: relative;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+.button-container a::after {
+    content: " / ";
+
+    color: #747474;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    pointer-events: none;
 }
 
 .button-container a:last-child {
     margin-right: 0;
 }
 
-.button-container a::after {
-    content: " / ";
-    color: #747474;
-}
-
 .button-container a:last-child::after {
     content: "";
     margin-left: 0;
+    padding-left: 0;
 }
 
-.button-container span:not(:first-child) {
-    margin: 0 10px;
+.button-container a:first-child {
+    margin-left: 0;
+    padding-left: 0;
+
 }
 
 .button {
     color: #bbbbbb;
     text-decoration: none;
-    transition: color 0.2s ease-in-out;
     font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -56,16 +118,77 @@ body {
 }
 
 .button:hover {
-    color: #d3a237;
+    text-decoration: none;
+    background-color: #d3a237;
+    color: #1a2124;
+}
+.button {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.button-container div:not(:first-of-type) span {
+    margin: 0 10px;
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: #d3a237;
+    color: #1a2124;
     text-decoration: none;
 }
 
+/* create a new css class for a button that is the sabe as above but without
+adding the '/' after */
+.button-container a.no-after::after {
+    content: "";
+    margin-left: 0;
+    padding-left: 0;
+}
 
-.markdown-body h1{
+
+.markdown-body h1 {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
     margin-top: 1rem;
     color: #d3a237;
+}
+
+.gg-link {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: rotate(-45deg) scale(var(--ggs,1));
+    width: 8px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 4px;
+    color: #d3a237;
+}
+.gg-link::after,
+.gg-link::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 8px;
+    height: 10px;
+    border: 2px solid;
+    top: -4px
+}
+.gg-link::before {
+    border-right: 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    left: -6px
+}
+.gg-link::after {
+    border-left: 0;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    right: -6px
 }
