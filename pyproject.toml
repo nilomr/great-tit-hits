@@ -19,15 +19,7 @@ license = { file = "LICENSE" }
 dependencies = ["pyrootutils", "pykanto", 'geopandas']
 
 [project.optional-dependencies]
-dev = ["ipywidgets", "ipykernel", "pytest", "nox", "black"]
-test = ["pytest >=7"]
-doc = [
-    "sphinx",
-    "sphinx-copybutton",
-    "sphinx_book_theme",
-    "myst-nb",
-    "myst-parser",
-]
+doc = ["mkdocs", "mkdocs-terminal"]
 
 [project.urls]
 Source = "https://github.com/nilomr/great-tit-hits"
