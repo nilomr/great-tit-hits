@@ -16,15 +16,20 @@
 }
 
 body {
+    margin: 0 auto;
+    padding: 0;
     color: var(--font-color);
     line-height: var(--global-line-height);
-    margin: 0;
     font-family: var(--font-stack);
     word-wrap: break-word;
     background-color: var(--background-color)
 }
 
-
+@media (min-width: 1200px){
+body {
+    max-width: 65em;
+}
+}
 
 .logo,
 h1,

@@ -25,7 +25,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0;
+  margin: 0 auto;
 }
 /* Links
  ========================================================================== */
@@ -8560,6 +8560,22 @@ iframe[data-uk-cover] {
   .uk-margin-xlarge-right {
     margin-right: 90px !important;
   }
+}
+/* Small phone screen and smaller */
+@media (max-width: 479px) {
+  .uk-margin-xlarge-left {
+    margin-left: 20px !important;
+  }
+  .uk-margin-xlarge-right {
+    margin-right: 20px !important;
+  }
+}
+
+body > nav.uk-navbar-container.uk-margin-small-left.uk-margin-small-right.uk-hidden\@m.uk-margin-xlarge-left.uk-margin-xlarge-right.uk-navbar.uk-sticky.uk-sticky-fixed > div.uk-navbar-left > div {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  line-height: 1em;
+  margin-top: 10px !important;
 }
 /* Auto
  ========================================================================== */
