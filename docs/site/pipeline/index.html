@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.4.3, mkdocs-terminal-4.4.0">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png" />
+    
+    
+    <link href="../../css/styles.css" rel="stylesheet"> 
+    <link href="../../css/uikit.css" rel="stylesheet"> 
+    
+    
+    <script src="../../js/uikit.js"></script>
+    <script src="../../js/uikit.js"></script>
+    <script src="../../js/uikit-icons.js"></script>
+    <script src="../../js/uikit-icons.js"></script>
+
+
+    
+ 
+<title>pipeline - docs</title>
+
+
+<link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet">
+<link href="../css/terminal.css" rel="stylesheet">
+<link href="../css/theme.css" rel="stylesheet">
+<link href="../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.7em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 2.5fr 9fr;
+    }
+}</style>
+
+
+
+
+
+    
+
+    
+    <!-- search css support -->
+<link href="../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "..",
+    shortcuts = "{}";
+</script>
+<script src="../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../js/mkdocs/base.js" defer></script>
+    
+    
+
+    
+    <script src="../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal">
+
+    <!-- Navigation Bar -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right"
+        uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+
+        <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-logo uk-light">wytham great tit
+                song dataset</div>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="button-container uk-navbar-nav">
+                <a class="button uk-text-lowercase" href="/docs/index.html#home">home</a>
+                <a class="button uk-text-lowercase" href="/docs/site/index.html">docs</a>
+                <a class="button uk-text-lowercase" href="/docs/index.html#about" uk-scroll>about</a>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Navigation Bar Ends  -->
+
+    <!-- Navigation Bar Mobile -->
+    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right"
+        uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <div class="uk-navbar-left">
+            <div class="uk-navbar-item uk-logo uk-light">wytham great tit
+                song dataset</div>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-light">
+                <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Change This -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-light">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical uk-text-lowercase uk-light">
+                <li class="uk-active"><a href="/docs/index.html#home">home</a></li>
+                <li class="uk-active"><a href="/docs/site/index.html">docs</a></li>
+                <li class="uk-active"><a href="/docs/index.html#about" uk-scroll>about</a></li>
+            </ul>
+        </div>
+    </div><div class="container">
+    <div class="terminal-nav uk-navbar-container uk-margin-small-left uk-margin-small-right uk-margin-xlarge-left uk-margin-xlarge-right uk-navbar">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a class="no-style">docs</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="0">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+    <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        <div class="container">
+            <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="..">[docs]</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../songs/song-files/">song_files</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+            
+                
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+            
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">metadata</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../metadata/main/">main.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../metadata/morphometrics/">morphometrics.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../metadata/nestboxes/">nestboxes.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../metadata/great-tit-hits/">great-tit-hits.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../metadata/feature_vectors/">feature_vectors.csv</a>
+        
+    
+    </li>
+            
+        
+            
+            
+                
+                
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../metadata/wytham_map/">/wytham_map</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        <span class="
+
+    terminal-mkdocs-side-nav-item--active">pipeline</span>
+    
+    
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#great-tit-dataset-pipeline">Great Tit Dataset Pipeline</a></li>
+        <li><a href="#visualisation-and-configuration-files">Visualisation and configuration files</a></li>
+        <li><a href="#instructions">Instructions</a></li>
+        
+    </ul>
+</nav>
+</aside>
+                <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="great-tit-dataset-pipeline">Great Tit Dataset Pipeline<a class="headerlink" href="#great-tit-dataset-pipeline" title="Anchor link to this section for reference"> #</a></h1>
+<p>This pipeline processes and prepares the Great Tit song dataset for sharing. It consists of the following steps:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Script</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>0.1-broods.py</code></td>
+<td>This script reads in bird breeding data from a CSV file, cleans and filters the data, and then saves the cleaned data to a new CSV file. It also generates several plots to visualize the data, including the number of unique bird broods per year, the proportion of different bird species over time, and the number of missing lay dates per year.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>0.2-morphometrics.py</code></td>
+<td>Reads in bird morphometrics data from the original CSV file, cleans and filters the data, and then saves it to a new CSV file. It also generates several plots, including the number of unique birds per year and the oldest birds in the dataset.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>0.3-nestboxes.py</code></td>
+<td>Reads in bird nestbox data, cleans and filters it, then saves the cleaned data to a new CSV file and generates several plots to visualize the data, including a scatterplot for each variable and a plot of the nestbox positions and perimeter of the study area.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>0.4-assign-recordings.py</code></td>
+<td>Reads in bird nestbox data and bird recordings data, and assigns recordings to breeding attempts in the nestboxes. It then renames the directories containing the recordings to include the year and breeding attempt number for each nestbox.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>0.5-link-metadata.py</code></td>
+<td>This script prepares metadata on bird immigration status, natal nest box if known, bird age, sampling information (effort, missing data, time and date, delay with respect to first egg).</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>0.6-first-morning-song.py</code></td>
+<td>Extracts information on the time of day when the birds first sing from the annotation XML files. It then creates plots showing the distribution of the time of day when the birds first sing, as well as the time since sunrise when the first song is sung. Finally, it plots the time of first song vs date for each year, by individual bird.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>1.0-segment-data.py</code></td>
+<td>Segments the recordings into individual songs and saves each song as a separate file. This first step is run on the full soundscape dataset (~9TB).</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>2.0-prepare-dataset.py</code></td>
+<td>Prepares the dataset by calculating and cleaning spectrograms, finding and labelling notes, etc. See the <a href="https://nilomr.github.io/pykanto/_build/html/contents/basic-workflow.html">pykanto docs</a> for more information.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>3.0-review-dataset.py</code></td>
+<td>This script is used to review the dataset and remove noise and labelling mistakes. It should be run manually and carefully - requires user imput - and it should only run once after the dataset has been labelled.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>5.0-export-train-set.py</code></td>
+<td>Exports a training set of songs for use in machine learning models.</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>5.1-export-img-set.py</code></td>
+<td>Exports the full set of spectrograms for infrence.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>6.0-link-all.py</code></td>
+<td>Cleans and reorders the columns, exports feature vectors derived from the metric learning model as CSV, removes bad files, updates JSONs, and extracts various statistics from the data to a markdown table.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>7.0-validate-segs.py</code></td>
+<td>This script/simple app can be used to check the results of the note segmentation procedure and calculate the percentage of notes that were correctly segmented. Requires user input.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>10.0-share-dataset.py</code></td>
+<td>Prepares the dataset for sharing by creating a ZIP file with all necessary files and saving this and the CSV metadata files to a new repo, <code>great-tit-hits</code>.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="visualisation-and-configuration-files">Visualisation and configuration files<a class="headerlink" href="#visualisation-and-configuration-files" title="Anchor link to this section for reference"> #</a></h1>
+<ul>
+<li><code>auxiliary.py</code>: Contains helper functions to create/use xml files.</li>
+<li><code>config.py</code>: Contains configuration settings for the project.</li>
+<li><code>plot-general-figs.py</code>: Plots general figures (Fig 1 in paper).</li>
+<li><code>plot-song-time-date.py</code>: Plots song activity vs time of the season and time of the day (3D plot).</li>
+<li><code>plot-song-vs-laydate-2d.py</code>: Plots the relationship between song activity and lay date.</li>
+<li><code>plot-song-vs-laydate.py</code>: Plots the relationship between song activity and lay date (3D plot).</li>
+<li><code>plot-spectrograms.py</code>: Plot example spectrograms of the songs.</li>
+</ul>
+<h1 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Anchor link to this section for reference"> #</a></h1>
+<blockquote>
+<p><strong>Note</strong>: Some original and intermediate files are quite heavy, and the process
+is generally computationally intensive. I have run most of this pipeline on the
+University HPC cluster. Steps 1 through 6 and 7 through 14 can be reproduced by
+cloning this repository and using the raw data provided at
+<a href="https://osf.io/n8ac9/">https://osf.io/n8ac9/</a>. I have assumed that the data will be located in some
+form of external storage, so you would need to change the path to this manually
+in <code>scripts/config.py</code>.</p>
+</blockquote>
+<p>To run the pipeline, follow these steps:</p>
+<hr />
+<p><strong>1</strong> | Clone the repository to your local machine and install the package locally</p>
+<pre><code class="language-bash">git clone https://github.com/nilomr/great-tit-hits-setup.git
+cd great-tit-hits-setup
+pip install . # Or pip install -e '.[dev, test, doc]' if you want to develop
+</code></pre>
+<p>See the <a href="https://nilomr.github.io/pykanto/_build/html/contents/installation.html">installation instructions for <code>pykanto</code></a> if you are going to use GPUs:</p>
+<hr />
+<p><strong>2</strong> | Place the song data from <a href="https://osf.io/n8ac9/">https://osf.io/n8ac9/</a> in a <code>data/segmented/great-tit-hits</code> directory under the project root. See <a href="https://nilomr.github.io/pykanto/_build/html/contents/project-setup.html">how to set up a project in pykanto</a> for an example of the project structure.</p>
+<blockquote>
+<p><strong>Note:</strong> the <code>config.py</code> file will try to create a symlink from a 'data' folder in your project to the external data location specified there, you don't need to do this manually as long as you provide a path to a location following the <code>/segmented/great-tit-hits/</code> pattern that has the <code>/WAV</code> and <code>/JSON</code> directories in it.</p>
+</blockquote>
+<hr />
+<p><strong>3</strong> | Run each script in order, starting with <code>0.1-broods.py</code> and ending with <code>10.0-share-dataset.py</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> You should skip step 7, <code>1.0-segment-data.py</code>, this requires the
+full soundscape recordings, which are not provided for practical reasons: it's
+9TB of mostly other birds and sounds. Do let me know if you want them and have
+a good system to transfer them!</p>
+</blockquote>
+<hr />
+<p><strong>4</strong> | The final output will be a ZIP file containing the song data and several CSV files with the relevant metadata</p>
+<p><br><br></p>
+</section>
+
+                </main>
+            </div>
+            <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Docs theme derived from <a
+            href="http://www.mkdocs.org">MkDocs</a> and <a
+            href="https://github.com/ntno/mkdocs-terminal">Terminal.</a> © Nilo M.
+            Recalde 2023
+        </div>
+    </div>
+</footer>
+        </div>
+
+        
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+        
+        
+    </div>
+</body>
+
+</html>

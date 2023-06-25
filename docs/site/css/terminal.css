@@ -26,7 +26,7 @@ body {
 
 @media (min-width: 1200px){
 body {
-    max-width: 65em;
+    max-width: 80em;
 }
 }
 
@@ -132,22 +132,21 @@ h6 {
     font-weight: 600
 }
 
+blockquote p {
+    margin: 0;
+    padding: 0
+}
 blockquote {
+    margin-left: .5em;
     position: relative;
-    padding-left: calc(var(--global-space) * 2);
-    padding-left: 2ch;
-    overflow: hidden
+    padding-left: calc(var(--global-space) * 1.5);
+    color: #9ca2ab;
+    background-color: #3131319a;
+    padding: .5em;
+    /* add a left border 2px grey line */
+    border-left: 3px solid #7c7c7c !important/* add a left border 2px grey line */
 }
 
-blockquote::after {
-    content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
-    white-space: pre;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: var(--global-line-height);
-    color: #9ca2ab
-}
 
 code {
     font-weight: inherit;
@@ -251,15 +250,30 @@ pre code {
     }
 }
 
-li,
+ul, li,
 li>ul>li {
-    position: hidden;
-    display: block;
     padding-left: calc(var(--global-space) * 2)
 }
 
-nav>ul>li {
-    padding-left: 0
+li {
+    padding-left: 0;
+}
+#terminal-mkdocs-side-panel ul, #terminal-mkdocs-side-panel li, #terminal-mkdocs-side-panel li>ul>li {
+    position: hidden;
+    display: block;
+    padding-left: 0;
+}
+
+#terminal-mkdocs-side-panel > nav:nth-child(1) > ul {
+    line-height: 1.7em;
+}
+#terminal-mkdocs-side-panel > nav:nth-child(1) > ul > li:nth-child(3) > ul{
+    line-height: 1.3em;
+    padding-left: calc(var(--global-space) * 2);
+}
+
+#terminal-mkdocs-side-panel > nav:nth-child(1) > ul > li:nth-child(3) {
+    padding-bottom: .3em;
 }
 
 li::after {
@@ -645,7 +659,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
     justify-content: center;
     cursor: pointer;
     outline: 0;
-    padding: .65em 2em;
+    padding: .75em 2em;
     font-size: 1em;
     font-family: inherit;
     -webkit-user-select: none;

@@ -61,7 +61,7 @@ body {
     body {
         margin-left: 0em;
         margin-right: auto;
-        max-width: 65em;
+        max-width: 80em;
         padding-left: 0.98em; /* hacky but haven't got the time to find the issue */
     }
 
