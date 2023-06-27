@@ -8056,7 +8056,7 @@ iframe[data-uk-cover] {
  * 1. Required for `a`
  */
 .uk-logo {
-  padding: 0;
+  padding: 0.6em;
   line-height: 1.5;
   background: none;
   /* 2 */
@@ -8572,8 +8572,8 @@ iframe[data-uk-cover] {
 }
 
 body > nav.uk-navbar-container.uk-margin-small-left.uk-margin-small-right.uk-hidden\@m.uk-margin-xlarge-left.uk-margin-xlarge-right.uk-navbar.uk-sticky.uk-sticky-fixed > div.uk-navbar-left > div {
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  /* margin-left: 20px !important;
+  margin-right: 20px !important; */
   line-height: 1em;
   margin-top: 10px !important;
 }

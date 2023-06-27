@@ -7,8 +7,8 @@ const audioFiles = [
   {id: '1', url: '/docs/media/20211MP66_longest.wav'},
   {id: '2', url: '/docs/media/20221B49_fastest.wav'},
   {id: '3', url: '/docs/media/20221C24C_slow.wav'},
-  {id: '4', url: '/docs/media/20221SW49A_standard.wav'},
   {id: '5', url: '/docs/media/O115.mp3'},
+  {id: '6', url: '/docs/media/greti_greatest_hits_2021.mp3'}
 ];
 
 for (const audioFile of audioFiles) {
@@ -17,8 +17,8 @@ for (const audioFile of audioFiles) {
 
   const wavesurfer = WaveSurfer.create({
     container: `#${containerId}`,
-    waveColor: '#3f3f3f',
-    progressColor: '#7e5f1c',
+    waveColor: '#1a2124',
+    progressColor: '#4b4b4b',
     sampleRate: 22050,
     url: audioFile.url,
     height: 100,
@@ -55,5 +55,13 @@ for (const audioFile of audioFiles) {
       wavesurfer.play();
       togglePauseButton.innerHTML = '<i class="fa fa-pause"></i>';
     }
+  });
+
+  wavesurfer.on('play', function() {
+    togglePauseButton.innerHTML = '<i class="fa fa-pause"></i>';
+  });
+
+  wavesurfer.on('pause', function() {
+    togglePauseButton.innerHTML = '<i class="fa fa-play"></i>';
   });
 }

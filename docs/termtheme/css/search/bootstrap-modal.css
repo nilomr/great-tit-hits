@@ -103,9 +103,10 @@
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: var(--code-bg-color);
+    background-color: #1a2124 !important;
     background-clip: padding-box;
     border: 1px solid var(--font-color);
+    border-radius: 10px;
     outline: 0;
 }
 
@@ -155,8 +156,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 1rem;
-    border-top: 1px solid var(--secondary-color);
+    padding: 0.5rem;
 }
 
 .modal-footer> :not(:first-child) {

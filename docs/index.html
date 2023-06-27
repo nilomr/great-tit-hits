@@ -20,6 +20,7 @@
 
 
 <body>
+    <div id="home"></div>
     <!-- Navigation Bar -->
     <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right"
         uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
@@ -74,17 +75,24 @@
 
     <!-- main site ----------------------------------------->
     <!-- Home -->
-    <div id="home"></div>
-    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
+    <section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-bottom">
 
-        <h1 class="uk-margin-xlarge-left uk-light uk-text-left 
-        uk-margin-xlarge-right" style="margin: 0 0 5px 0; line-height: 1em; color: rgb(80, 80, 80);">Great Tit<br>Song
-            Dataset</h1>
-        <div class="uk-margin-xlarge-left uk-text-left uk-margin-xlarge-right uk-flex-left
-        button-container">
-            <a href="https://example.com/article" target="_blank" class="button">Article</a>
-            <a href="https://example.com/code-repository" target="_blank" class="button">Code Repository</a>
-            <a href="https://example.com/osf-data" target="_blank" class="button">OSF Data</a>
+
+        <div class="header-img uk-margin-xlarge-left uk-margin-xlarge-right">
+            <img src="/docs/media/greti_woods.jpg" alt="Greti Woods">
+        </div>
+        <div class="main-title">
+            <h1 class="uk-margin-xlarge-left uk-light uk-text-left 
+                uk-margin-xlarge-right"
+                style="letter-spacing: -1px; word-spacing: -.06em; margin: 0 0 5px 0; line-height: 1em; color: #5f5f5f;">
+                Great Tit<br>Song
+                Dataset</h1>
+            <div class="uk-margin-xlarge-left uk-text-left uk-margin-xlarge-right uk-flex-left button-container">
+                <a href="https://example.com/article" target="_blank" class="button">Article</a>
+                <a href="https://github.com/nilomr/great-tit-hits-setup" target="_blank" class="button">Code
+                    Repository</a>
+                <a href="https://osf.io/n8ac9/" target="_blank" class="button">OSF Data</a>
+            </div>
         </div>
     </section>
 
@@ -101,9 +109,6 @@
             dataset and associated software tools publicly available with the aim that other researchers can benefit
             from this resource and use it to further our understanding of bird vocal behaviour in the wild.
         </p>
-        <a href="" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href=""
-            class="uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="" class="uk-button-text uk-light"
-            uk-icon="github"></a> &nbsp;<a href="" class=" uk-light uk-button-text" uk-icon="linkedin"></a>
 
     </section>
     <!-- home Ends -->
@@ -113,9 +118,23 @@
     <section class="uk-margin-small-left uk-margin-small-right uk-margin-large-top uk-margin-xlarge-bottom">
         <h3 class="uk-margin-xlarge-left uk-light">Song gallery</h3>
 
+        <p class="uk-margin-xlarge-left uk-margin-xlarge-right">
+        The dataset documents changes in individual performance, the appearance
+        and disappearance of birds—and with them, their songs—and highlights
+        just how much behavioural variation there is along every dimension of
+        what could at first seem a relatively simple trait. Some birds display
+        metronome-like regularity in their performance, while others have highly
+        variable or unusual songs. The longest song recorded is approximately 20
+        times longer than the shortest song (and, coincidentally, was sung by
+        one of the largest great tits ever recorded in the Wytham population).
+        These are a few examples:
+
+        </p>
+
         <div class="player-wrap uk-margin-xlarge-left uk-margin-xlarge-right">
             <!-- add a title with a new css id -->
-            <div class="spectro-title" class="uk-text-center">My Title</div>
+            <div class="spectro-title" class="uk-text-center">An extremely long song
+                (25 seconds)</div>
             <div class="wave-container">
                 <div class="audio-controls">
                     <audio-button type="button" class="btn-toggle-pause-1">
@@ -126,52 +145,65 @@
                 <div id="wave-spectrogram-1"></div>
             </div>
         </div>
-
-        <div class="player-wrap uk-margin-xlarge-left uk-margin-xlarge-right">
-            <!-- add a title with a new css id -->
-            <div class="spectro-title" class="uk-text-center">My Title</div>
-            <div class="wave-container">
-                <div class="audio-controls">
-                    <audio-button type="button" class="btn-toggle-pause-2">
-                        <i class="fa fa-play"></i>
-                    </audio-button>
+        <div class="player-wrap-container uk-margin-xlarge-left uk-margin-xlarge-right">
+            <div class="player-wrap-item">
+                <!-- add a title with a new css id -->
+                <div class="spectro-title" class="uk-text-center">A very fast song</div>
+                <div class="wave-container">
+                    <div class="audio-controls">
+                        <audio-button type="button" class="btn-toggle-pause-2">
+                            <i class="fa fa-play"></i>
+                        </audio-button>
+                    </div>
+                    <div id="waveform-2"></div>
+                    <div id="wave-spectrogram-2"></div>
                 </div>
-                <div id="waveform-2"></div>
-                <div id="wave-spectrogram-2"></div>
+            </div>
+            <div class="player-wrap-item">
+                <!-- add a title with a new css id -->
+                <div class="spectro-title" class="uk-text-center">And a much
+                    slower one</div>
+                <div class="wave-container">
+                    <div class="audio-controls">
+                        <audio-button type="button" class="btn-toggle-pause-3">
+                            <i class="fa fa-play"></i>
+                        </audio-button>
+                    </div>
+                    <div id="waveform-3"></div>
+                    <div id="wave-spectrogram-3"></div>
+                </div>
             </div>
         </div>
 
         <div class="player-wrap uk-margin-xlarge-left uk-margin-xlarge-right">
             <!-- add a title with a new css id -->
-            <div class="spectro-title" class="uk-text-center">My Title</div>
+            <div class="spectro-title" class="uk-text-center">Abnormal song</div>
             <div class="wave-container">
                 <div class="audio-controls">
-                    <audio-button type="button" class="btn-toggle-pause-3">
+                    <audio-button type="button" class="btn-toggle-pause-5">
                         <i class="fa fa-play"></i>
                     </audio-button>
                 </div>
-                <div id="waveform-3"></div>
-                <div id="wave-spectrogram-3"></div>
+                <div id="waveform-5"></div>
+                <div id="wave-spectrogram-5"></div>
             </div>
         </div>
+
 
         <div class="player-wrap uk-margin-xlarge-left uk-margin-xlarge-right">
             <!-- add a title with a new css id -->
-            <div class="spectro-title" class="uk-text-center">My Title</div>
+            <div class="spectro-title" class="uk-text-center">Diverse songs,
+                including some possible learning from other species</div>
             <div class="wave-container">
                 <div class="audio-controls">
-                    <audio-button type="button" class="btn-toggle-pause-4">
+                    <audio-button type="button" class="btn-toggle-pause-6">
                         <i class="fa fa-play"></i>
                     </audio-button>
                 </div>
-                <div id="waveform-4"></div>
-                <div id="wave-spectrogram-4"></div>
+                <div id="waveform-6"></div>
+                <div id="wave-spectrogram-6"></div>
             </div>
         </div>
-
-        </div>
-        </div>
-
 
     </section>
 
@@ -201,6 +233,10 @@
             no-after">Nilo</a>'s PhD research project. Data were collected from
             2020 to 2023 in Wytham Woods, Oxfordshire, UK.
         </p>
+        <a href="https://github.com/nilomr" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="github"></a>
+        &nbsp;
+        <a href="https://nilomr.github.io/" class="uk-light uk-button-text" uk-icon="world"></a> &nbsp;
+
     </section>
     <!-- About Section Ends -->
 </body>

@@ -195,7 +195,18 @@ pre code {
 .terminal strong {
     font-style: normal;
     font-family: var(--font-stack);
-    color: #b1b1b1
+    color: #df4e69
+}
+
+.terminal pre code {
+    color: #e1e1e1;
+    background-color: #3131319a;
+    border-radius: 1em;
+}
+
+.terminal strong {
+    color: #e1e1e1;
+    font-weight: 600
 }
 
 .terminal h1,.terminal h2, .terminal h4{
@@ -543,6 +554,7 @@ input[type=password],
 input[type=search],
 input[type=text] {
     border: 1px var(--input-style) var(--font-color);
+    border-radius: 10px !important;
     width: 100%;
     padding: .7em .5em;
     font-size: 1em;
