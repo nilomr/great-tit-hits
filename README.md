@@ -3,7 +3,8 @@
 <div align='center'>
 
 <a href="https://nilomr.github.io/pykanto">
-    <img src="docs/img/greti_cover.jpg" alt="great-tit-hits repo logo" title="great-tit-hits" height="300" style="padding-bottom:1em !important;" />
+    <img src="docs/img/greti_cover.jpg" alt="great-tit-hits repo logo"
+    title="great-tit-hits" style="padding-bottom:1em !important;" />
 </a>
 
 <br>
