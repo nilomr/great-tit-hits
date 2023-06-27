@@ -1,10 +1,8 @@
-<br>
-<br>
+
 <div align='center'>
 
 <a href="https://nilomr.github.io/pykanto">
-    <img src="docs/img/greti_cover.jpg" alt="great-tit-hits repo logo"
-    title="great-tit-hits" style="padding-bottom:1em !important;" />
+    <img src="docs/img/greti_cover.jpg" alt="great-tit-hits repo logo" title="great-tit-hits" height="400" style="padding-bottom:1em !important;" />
 </a>
 
 <br>
@@ -20,7 +18,10 @@ For detailed instructions on reproducing the dataset, please refer to the
 [Article](https://nilomr.github.io/great-tit-hits/) • [Code
 Repository](https://github.com/nilomr/great-tit-hits-setup)
 
+
 </div>
+
+
 
 # ㅤ
 <sub>© Nilo M. Recalde, 2020-present</sub>
