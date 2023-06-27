@@ -220,7 +220,8 @@ pre code {
 }
 
 .terminal-prompt::before {
-    content: "> "
+    content: "> ";
+    color: var(--primary-color);
 }
 
 .terminal-prompt::after {

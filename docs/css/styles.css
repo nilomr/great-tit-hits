@@ -68,7 +68,12 @@ body {
     font-size: .9em;
     margin-bottom: 0.5em;
     display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
+
 .wave-container {
     position: relative;
     border: 2px solid #858585;
@@ -217,13 +222,13 @@ audio-button i {
 
 .button-container a::after {
     content: " / ";
-
     color: #747474;
     position: absolute;
     left: 100%;
     top: 0;
     pointer-events: none;
 }
+
 
 .button-container a:last-child {
     margin-right: 0;
@@ -240,6 +245,55 @@ audio-button i {
     padding-left: 0;
 
 }
+
+@media (max-width: 640px) {
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .button-container a {
+        display: flex;
+        text-decoration: none;
+        margin-right: 0;
+        padding-right: 0;
+        position: relative;
+        margin-left: 0 !important;
+        padding-left: 10px;
+    }
+
+    .button-container a::after {
+        content: "";
+        color: #747474;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        pointer-events: none;
+    }
+
+    .button-container a::before {
+        content: "/ ";
+        color: #747474;
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+
+    .button-container a:first-child {
+        margin-left: none !important;
+        padding-left: 10px;
+    
+    }
+    
+
+}
+
 
 .button {
     color: #bbbbbb;
@@ -295,13 +349,15 @@ adding the '/' after */
 .gg-link {
     box-sizing: border-box;
     position: relative;
-    display: block;
+    display: inline-block !important;
     transform: rotate(-45deg) scale(var(--ggs, 1));
     width: 8px;
     height: 2px;
     background: currentColor;
     border-radius: 4px;
     color: #d3a237;
+    top: -0.3em;
+    
 }
 
 .gg-link::after,
@@ -314,7 +370,7 @@ adding the '/' after */
     width: 8px;
     height: 10px;
     border: 2px solid;
-    top: -4px
+    top: -5px
 }
 
 .gg-link::before {
@@ -361,4 +417,14 @@ adding the '/' after */
 #searchModalLabel {
     color:#bbbbbb !important;
     font-weight: 600;
+}
+
+body > nav.uk-navbar-container.uk-margin-small-left.uk-margin-small-right.uk-hidden\@m.uk-margin-xlarge-left.uk-margin-xlarge-right.uk-navbar.uk-sticky.uk-navbar-sticky.uk-sticky-below.uk-sticky-fixed > div.uk-navbar-left > div {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+}
+
+body > nav.uk-navbar-container.uk-margin-small-left.uk-margin-small-right.uk-hidden\@m.uk-margin-xlarge-left.uk-margin-xlarge-right.uk-navbar.uk-sticky.uk-sticky-fixed > div.uk-navbar-left > div {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
 }
