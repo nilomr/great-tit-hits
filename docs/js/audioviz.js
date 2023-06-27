@@ -1,14 +1,14 @@
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7.0.0-beta.11/dist/wavesurfer.js'
 import Spectrogram from 'https://unpkg.com/wavesurfer.js@7.0.0-beta.11/dist/plugins/spectrogram.js'
 
-import colorMap from '/docs/bone-colormap.json' assert {type: 'json'};
+import colorMap from './bone-colormap.json' assert {type: 'json'};
 
 const audioFiles = [
-  {id: '1', url: '/docs/media/20211MP66_longest.wav'},
-  {id: '2', url: '/docs/media/20221B49_fastest.wav'},
-  {id: '3', url: '/docs/media/20221C24C_slow.wav'},
-  {id: '5', url: '/docs/media/O115.mp3'},
-  {id: '6', url: '/docs/media/greti_greatest_hits_2021.mp3'}
+  {id: '1', url: './media/20211MP66_longest.wav'},
+  {id: '2', url: './media/20221B49_fastest.wav'},
+  {id: '3', url: './media/20221C24C_slow.wav'},
+  {id: '5', url: './media/O115.mp3'},
+  {id: '6', url: './media/greti_greatest_hits_2021.mp3'}
 ];
 
 for (const audioFile of audioFiles) {
