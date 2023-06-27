@@ -69,8 +69,8 @@ body {
     margin-bottom: 0.5em;
     display: block;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+
+
 }
 
 
@@ -118,7 +118,6 @@ body {
 }
 
 
-
 .player-wrap-container {
     display: flex;
     justify-content: space-between;
@@ -131,6 +130,17 @@ body {
     margin-bottom: 1em;
   }
 
+/*  no flex in mobile*/
+
+@media (max-width: 640px) {
+    .player-wrap-container {
+        display: block;
+    }
+
+    .player-wrap-item {
+        width: 100%;
+    }
+}
 
 
 /* audio */
