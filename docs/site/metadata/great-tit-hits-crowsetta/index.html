@@ -29,7 +29,7 @@
 
     
  
-<title>nestboxes.csv - docs</title>
+<title>great-tit-hits-crowsetta.csv - docs</title>
 
 
 <link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
@@ -288,9 +288,11 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        <span class="
+        
+            <a class="
 
-    terminal-mkdocs-side-nav-item--active">nestboxes.csv</span>
+    terminal-mkdocs-side-nav-item" href="../nestboxes/">nestboxes.csv</a>
+        
     
     </li>
             
@@ -324,11 +326,9 @@
                 <li class="terminal-mkdocs-side-nav-li-ul-li">
     
         
-        
-            <a class="
+        <span class="
 
-    terminal-mkdocs-side-nav-item" href="../great-tit-hits-crowsetta/">great-tit-hits-crowsetta.csv</a>
-        
+    terminal-mkdocs-side-nav-item--active">great-tit-hits-crowsetta.csv</span>
     
     </li>
             
@@ -400,88 +400,39 @@
 </nav><hr>
 <nav>
     <ul>
-        <li><a href="#wytham-woods-nest-box-locations">Wytham Woods Nest Box Locations</a></li>
-        <li><a href="#file-format">File Format</a></li><li><a href="#variable-descriptions">Variable Descriptions</a></li>
+        <li><a href="#great-tit-hits-dataset">Great Tit Hits Dataset</a></li>
+        <li><a href="#crowsetta-format">(crowsetta format)</a></li>
     </ul>
 </nav>
 </aside>
                 <main id="terminal-mkdocs-main-content">
 <section id="mkdocs-terminal-content">
-    <h1 id="wytham-woods-nest-box-locations">Wytham Woods Nest Box Locations<a class="headerlink" href="#wytham-woods-nest-box-locations" title="Anchor link to this section for reference"> #</a></h1>
-<p>The <code>nestboxes.csv</code> file contains information on the location and
-characteristics of nest boxes in Wytham Woods. The dataset includes information
-on the nest box ID, location coordinates, type, altitude, aspect, and habitat
-and soil types. These data are also included in <code>main.csv</code>.</p>
-<h2 id="file-format">File Format<a class="headerlink" href="#file-format" title="Anchor link to this section for reference"> #</a></h2>
-<p>The CSV file has no index column, and the first row contains the column names. The column names provide descriptive labels for each variable in the dataset.</p>
-<h2 id="variable-descriptions">Variable Descriptions<a class="headerlink" href="#variable-descriptions" title="Anchor link to this section for reference"> #</a></h2>
-<table>
-<thead>
-<tr>
-<th>Column Name</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nestbox</td>
-<td>The ID of the nest box.</td>
-</tr>
-<tr>
-<td>section</td>
-<td>The section of Wytham Woods where the nest box is located.</td>
-</tr>
-<tr>
-<td>x</td>
-<td>The X coordinate (Easting) of the nest box. Uses the British National Grid Eastings and Northings.</td>
-</tr>
-<tr>
-<td>y</td>
-<td>The Y coordinate (Northing) of the nest box. Uses the British National Grid Eastings and Northings.</td>
-</tr>
-<tr>
-<td>type</td>
-<td>The type of nest box (great or blue tit-size entrance hole)</td>
-</tr>
-<tr>
-<td>poly</td>
-<td>The area of the Thiessen polygon formed around the nest box, restricting areas to within the perimeter of the woodland.</td>
-</tr>
-<tr>
-<td>edge_edi</td>
-<td>Edge distance index (EDI). Accounts for the number and distribution of habitat edges in close proximity to the nest box.</td>
-</tr>
-<tr>
-<td>altitude_m</td>
-<td>The altitude of the nest box in meters.</td>
-</tr>
-<tr>
-<td>aspect</td>
-<td>The aspect of the nest box.</td>
-</tr>
-<tr>
-<td>northness</td>
-<td>The northness value of the nest box.</td>
-</tr>
-<tr>
-<td>habitat_type</td>
-<td>The type of habitat the nest box is in.</td>
-</tr>
-<tr>
-<td>soil_type</td>
-<td>The type of soil around the nest box.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Also see:</strong></p>
+    <h1 id="great-tit-hits-dataset">Great Tit Hits Dataset<a class="headerlink" href="#great-tit-hits-dataset" title="Anchor link to this section for reference"> #</a></h1>
+<h3 id="crowsetta-format">(crowsetta format)<a class="headerlink" href="#crowsetta-format" title="Anchor link to this section for reference"> #</a></h3>
+<p>The <code>great-tit-hits-crowsetta.csv</code> file contains song annotations in
+<a href="https://crowsetta.readthedocs.io/en/latest/index.html">crowsetta's <code>GenericSeq</code>
+format</a>. There are
+1,161,033 rows, one per note, with the
+following columns:</p>
 <ul>
-<li>
-<p>Wilkin, Teddy A., et al. "Edge Effects in the Great Tit: Analyses of Long-Term Data with GIS Techniques." Conservation Biology 21, no. 5 (2007): 1207–17. JSTOR. http://www.jstor.org/stable/4620944.</p>
-</li>
-<li>
-<p>Wilkin, T.A., Perrins, C.M., and Sheldon, B.C. "The use of GIS in estimating spatial variation in habitat quality: a case study of lay-date in the Great Tit Parus major." Ibis 149 (2007): 110-118. https://doi.org/10.1111/j.1474-919X.2007.00757.x.</p>
-</li>
+<li><code>label</code></li>
+<li><code>onset_s</code></li>
+<li><code>offset_s</code></li>
+<li><code>onset_sample</code></li>
+<li><code>offset_sample</code></li>
+<li><code>notated_path</code></li>
+<li><code>annot_path</code></li>
+<li><code>sequence</code></li>
+<li><code>annotation</code></li>
 </ul>
+<p>See the <a href="https://crowsetta.readthedocs.io/en/latest/index.html">crowsetta docs</a>
+to learn how to use the library. To load the dataset in this format, simply run:</p>
+<pre><code class="language-python">data root = [...]
+from crowsetta.formats.seq import GenericSeq
+dataset = GenericSeq.from_file(data_root / &quot;great-tit-hits-crowsetta.csv&quot;)
+</code></pre>
+<p>The dataset was exported in this format using <code>scrpts/auxiliary/to-crowsetta.py</code>
+(see <a href="https://github.com/nilomr/great-tit-hits-setup">repo</a>)/</p>
 </section>
 
                 </main>

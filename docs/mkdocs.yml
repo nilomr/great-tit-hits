@@ -22,6 +22,7 @@ nav:
         - 'morphometrics.csv': 'metadata/morphometrics.md'
         - 'nestboxes.csv' : 'metadata/nestboxes.md'
         - 'great-tit-hits.csv' : 'metadata/great-tit-hits.md'
+        - 'great-tit-hits-crowsetta.csv' : 'metadata/great-tit-hits-crowsetta.md'
         - 'feature_vectors.csv': 'metadata/feature_vectors.md'
         - '/wytham_map': 'metadata/wytham_map.md'
     - 'pipeline' : 'pipeline.md'
