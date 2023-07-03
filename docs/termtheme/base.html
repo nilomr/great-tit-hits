@@ -15,6 +15,7 @@
     <!-- HTML Meta Tags -->
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <meta name="description" content="Docs: Great Tit Song Dataset">
+    <title>Docs: Wytham Great Tit Song Dataset</title>
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://nilomr.github.io/great-tit-hits/site/">
@@ -38,13 +39,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% include "theme_version.html" %}
-    {% if config.site_description %}
-    <meta name="description" content="{{ config.site_description }}">{% endif %}
     {% if config.site_author %}
     <meta name="author" content="{{ config.site_author }}">{% endif %}
     {% if page.canonical_url %}
     <link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
-    {%- block favicon %}{% include "partials/favicon.html" %}{%- endblock favicon %}
+
     {%- endblock site_meta %}
 
     {% for path in config.extra_css %}
@@ -55,7 +54,6 @@
     <script src="../{{ path|url }}"></script>{% endfor %}
 
 
-    {%- block htmltitle %}{% include "partials/html-title.html" %}{%- endblock htmltitle %}
     {%- block styles %}{% include "partials/styles.html" %}{%- endblock styles %}
 
 
@@ -73,6 +71,7 @@
     {% endfor %}
 
     {% block analytics %}{% endblock analytics %}
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 
 <body class="terminal">
