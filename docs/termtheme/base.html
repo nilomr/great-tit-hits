@@ -2,6 +2,16 @@
 <html {% block site_lang %}lang="en" {% endblock site_lang %}>
 
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VV4NWWRG3F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VV4NWWRG3F');
+    </script>
+
     {% set features = config.theme.features or [] %}
     {%- block site_meta %}
     <meta charset="UTF-8">
