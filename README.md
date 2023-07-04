@@ -15,7 +15,7 @@ For detailed instructions on reproducing the dataset, please refer to the
 [companion repository](https://github.com/nilomr/great-tit-hits-setup).
 
 [Website](https://nilomr.github.io/great-tit-hits/) •
-[Article](https://nilomr.github.io/great-tit-hits/) • [Code
+[Article](https://www.biorxiv.org/content/10.1101/2023.07.03.547484v1.full.pdf) • [Code
 Repository](https://github.com/nilomr/great-tit-hits-setup)
 
 
