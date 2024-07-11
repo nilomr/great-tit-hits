@@ -1,5 +1,5 @@
-import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7.0.0-beta.11/dist/wavesurfer.js'
-import Spectrogram from 'https://unpkg.com/wavesurfer.js@7.0.0-beta.11/dist/plugins/spectrogram.js'
+import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.js'
+import Spectrogram from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/spectrogram.js'
 
 import colorMap from '../bone-colormap.json' assert {type: 'json'};
 
