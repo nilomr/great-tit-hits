@@ -1,7 +1,7 @@
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.js'
 import Spectrogram from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/spectrogram.js'
 
-import colorMap from '../bone-colormap.json' assert {type: 'json'};
+import colorMap from '../bone-colormap.json' with { type: 'json' };
 
 const audioFiles = [
   {id: '1', url: './media/20211MP66_longest.wav'},
