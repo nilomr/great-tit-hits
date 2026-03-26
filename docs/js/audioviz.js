@@ -3,6 +3,12 @@ import Spectrogram from 'https://unpkg.com/wavesurfer.js@7/dist/plugins/spectrog
 
 import colorMap from '../bone-colormap.json' with { type: 'json' };
 
+const waveHeight = 72;
+const spectrogramHeight = 128;
+const spectrogramOpacity = 0.9;
+const waveformOpacity = 0.10;
+const waveformProgressOpacity = 0.3;
+
 const audioFiles = [
   {id: '1', url: './media/20211MP66_longest.wav'},
   {id: '2', url: './media/20221B49_fastest.wav'},
@@ -13,15 +19,20 @@ const audioFiles = [
 
 for (const audioFile of audioFiles) {
   const containerId = `waveform-${audioFile.id}`;
-  const spectrogramContainerId = `wave-spectrogram-${audioFile.id}`;
+  const waveContainer = document.querySelector(`#${containerId}`)?.parentElement;
+
+  if (waveContainer) {
+    waveContainer.style.setProperty('--wave-height', `${waveHeight}px`);
+    waveContainer.style.setProperty('--spectrogram-height', `${spectrogramHeight}px`);
+  }
 
   const wavesurfer = WaveSurfer.create({
     container: `#${containerId}`,
-    waveColor: '#1a2124',
-    progressColor: '#4b4b4b',
+    waveColor: '#f2f2f2',
+    progressColor: '#bfbfbf',
     sampleRate: 22050,
     url: audioFile.url,
-    height: 100,
+    height: waveHeight,
     responsive: true,
     hideScrollbar: true,
     cursorColor: "#dfdfdf",
@@ -30,16 +41,91 @@ for (const audioFile of audioFiles) {
     normalize: true,
   });
 
-  wavesurfer.registerPlugin(
+  const spectrogram = wavesurfer.registerPlugin(
     Spectrogram.create({
-      container: `#${spectrogramContainerId}`,
       colorMap: colorMap,
       fftSamples:1024,
+      height: spectrogramHeight,
       labels: false,
       frequencyMax: 10000,
       frequencyMin: 1000
     }),
   )
+
+  const applySpectrogramOverlay = () => {
+    const waveWrapper = wavesurfer.getWrapper();
+    const waveformCanvas = waveWrapper?.querySelector('.canvases');
+    const progressWrapper = waveWrapper?.querySelector('.progress');
+    const cursor = waveWrapper?.querySelector('.cursor');
+
+    if (!waveWrapper || !waveformCanvas || !spectrogram.wrapper || !spectrogram.canvasContainer) {
+      return;
+    }
+
+    const verticalScale = waveHeight / spectrogramHeight;
+
+    Object.assign(waveWrapper.style, {
+      height: `${waveHeight}px`,
+      overflow: 'hidden',
+      background: '#000000',
+    });
+
+    Object.assign(waveformCanvas.style, {
+      minHeight: `${waveHeight}px`,
+      position: 'relative',
+      zIndex: '0',
+      opacity: `${waveformOpacity}`,
+    });
+
+    if (progressWrapper) {
+      progressWrapper.style.zIndex = '1';
+      progressWrapper.style.opacity = `${waveformProgressOpacity}`;
+    }
+
+    if (cursor) {
+      cursor.style.zIndex = '3';
+    }
+
+    Object.assign(spectrogram.wrapper.style, {
+      position: 'absolute',
+      top: '50%',
+      left: '0',
+      width: '100%',
+      height: `${spectrogramHeight}px`,
+      transform: `translateY(-50%) scaleY(${verticalScale})`,
+      transformOrigin: 'center center',
+      overflow: 'hidden',
+      pointerEvents: 'none',
+      zIndex: '2',
+      background: 'transparent',
+    });
+
+    Object.assign(spectrogram.canvasContainer.style, {
+      position: 'absolute',
+      inset: '0',
+      width: '100%',
+      height: `${spectrogramHeight}px`,
+      opacity: `${spectrogramOpacity}`,
+      background: 'transparent',
+    });
+
+    spectrogram.wrapper.querySelectorAll('canvas').forEach((canvas) => {
+      canvas.style.background = 'transparent';
+      canvas.style.opacity = `${spectrogramOpacity}`;
+    });
+  };
+
+  spectrogram.on('ready', () => {
+    requestAnimationFrame(applySpectrogramOverlay);
+  });
+
+  wavesurfer.on('ready', () => {
+    requestAnimationFrame(applySpectrogramOverlay);
+  });
+
+  wavesurfer.on('redrawcomplete', () => {
+    requestAnimationFrame(applySpectrogramOverlay);
+  });
 
   wavesurfer.once('interaction', () => {
     wavesurfer.play()
